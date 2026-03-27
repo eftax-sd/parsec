@@ -32,3 +32,14 @@ npm run tauri build
 ```
 
 Installers are placed in `src-tauri/target/release/bundle/`.
+
+## Publishing a Release
+
+Push a version tag to trigger the GitHub Actions release workflow. It builds installers for Windows, macOS (Apple Silicon + Intel), and Linux, then creates a draft release on GitHub.
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+Go to the [Releases](https://github.com/eftax-sd/parsec/releases) page, review the draft, and publish when ready.
